@@ -31,7 +31,7 @@ if not API_KEY:
 # These models are tried in order.
 # Availability depends on your API account.
 MODELS = [
-    "gemini-3-flash"
+    "gemini-3-flash-preview"
 ]
 
 # -----------------------------------
