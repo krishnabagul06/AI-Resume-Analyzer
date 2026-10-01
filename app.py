@@ -31,10 +31,7 @@ if not API_KEY:
 # These models are tried in order.
 # Availability depends on your API account.
 MODELS = [
-    "gemini-2.5-flash-8b",
-    "gemini-2.5-flash",
-    "gemini-3.8-flash",
-    "gemini-3-flash-preview"
+    "gemini-3-flash"
 ]
 
 # -----------------------------------
@@ -118,6 +115,7 @@ def extract_text_from_pdf(pdf_file):
 # 4. GENERATIVE AI ANALYSIS
 # -----------------------------------
 
+@st.cache_data(show_spinner=False)
 def analyze_resume(resume_text, job_description, api_key):
 
     client = genai.Client(api_key=api_key)
